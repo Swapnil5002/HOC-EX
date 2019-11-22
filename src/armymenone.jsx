@@ -16,7 +16,7 @@ class Armymenone extends Component {
         return (
             <div className="one-cotainer">
                 <h2 className="camp-title">Camp: {this.props.camp}</h2>
-                <h3 className="function-handler" onMouseOver={this.hocHandlegunshots}>
+                <h3 className="function-handler">
                    Armymenone {this.props.gunName} 
                    gunshots : {this.props.hocGunshots}
                 </h3>

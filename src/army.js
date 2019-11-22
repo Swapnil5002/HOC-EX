@@ -15,6 +15,7 @@ const Army = (Men, shot) => {
             }
             this.handleMouseoverEvents = this.handleMouseoverEvents.bind(this);
             this.handleReload = this.handleReload.bind(this);
+            this.handleMouseClick = this.handleMouseClick.bind(this);
         }
 
         handleReload() {
@@ -33,10 +34,12 @@ const Army = (Men, shot) => {
         }
 
         handleMouseClick = () => {
-            this.setState({
-                gunShots: this.state.gunShots - shot,
-                score: this.state.score + 1
-            })
+            if(this.state.gunShots != 0) {
+                this.setState({
+                    gunShots: this.state.gunShots - shot,
+                    score: this.state.score + 1
+                })
+            }
         }
 
     
