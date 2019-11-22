@@ -18,11 +18,11 @@ const Army = (Men, shot) => {
             this.handleMouseClick = this.handleMouseClick.bind(this);
         }
 
-        handleReload() {
-            this.setState((prevstate) => ({
-                score: prevstate.score,
+        handleReload(e) {
+            e.preventDefault();
+            this.setState({
                 gunShots: 50
-            }))
+            })
         }
 
 
@@ -42,11 +42,9 @@ const Army = (Men, shot) => {
             }
         }
 
-    
-
         render() {
             return (
-                <div>
+                <div className="men">
                     <Men 
                         gunName="AK47" 
                         // hocHandlegunshots={this.handleMouseOver}
@@ -58,6 +56,9 @@ const Army = (Men, shot) => {
                     <img src={bullsEye} alt="bullseye" className="bull-image" text="Shoot here" onClick={this.handleMouseClick}/>
                     <div className="reload">
                         <a href="" onClick={this.handleReload} className="reload-button">RELOAD</a>
+                    </div>
+                    <div className="button-control">
+                        <a className="button" href="">End Shooting</a>
                     </div>
                 </div>
             )

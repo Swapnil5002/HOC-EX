@@ -3,7 +3,15 @@ import Army from './army.js'
 import image from "./assets/soldier.png"
 import './armymenone.css'
 
-class Armymenone extends Component {
+class Armymenthree extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+        }
+    }
+
+ 
+
     render() {
         return (
             <div className="one-cotainer">
@@ -18,4 +26,4 @@ class Armymenone extends Component {
     }
 }
 
-export default Army(Armymenone, 10);
+export default Army(Armymenthree, 8);

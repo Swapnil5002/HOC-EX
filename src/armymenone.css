@@ -1,3 +1,8 @@
 .army-image {
     height: 100px;
 }
+
+.one-container {
+    width: 70%;
+    margin: 150px auto;
+}

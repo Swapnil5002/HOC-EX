@@ -1,23 +1,10 @@
 .App {
+    background-image: url("../src/assets/background.jpg");
     display: flex;
     flex-direction: rows;
     justify-content: space-evenly;
     background-color:greenyellow;
-    height: 450px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif  ;
-}
-
-.button {
-    text-decoration: none;
-    border: 1px solid orange;
-    background: orange;
-    border-radius: 30px;
-    color:black;
-    padding: 20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif  ;
-}
-
-.button-control {
-    margin-top: 45px;
-    text-align: center;
+    font-weight: bold;
+  
 }
