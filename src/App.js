@@ -5,10 +5,17 @@ import Armymentwo from './armymentwo';
 
 function App() {
   return (
-    <div className="App">
-      <Armymenone camp="Madras Camp"/>
-      <Armymentwo camp="Singh Camp" />
-    </div>
+    <React.Fragment>
+      <div className="App">
+        <Armymenone camp="Madras Camp"/>
+        <Armymentwo camp="Singh Camp" />
+      </div>
+      <div className="button-control">
+        <a className="button" href="">End Shooting</a>
+      </div>
+      
+    </React.Fragment>
+    
   );
 }
 

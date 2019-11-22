@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
+import SoldierImg from './assets/soldier.png'
 
 const Army = (Men, shot) => {
     class NewMen extends Component {
         constructor(props) {
             super(props);
             this.state = {
-                    gunShots: 0
+                    gunShots: 0,
+                    image: SoldierImg
             }
         }
 
@@ -15,14 +17,20 @@ const Army = (Men, shot) => {
             })
         }
 
+        handleImage = () => {
+            this.setState({
+                image: this.state.image
+            })
+        }
+
         render() {
-            console.log(this.props.camp)
             return (
                 <div>
                     <Men 
                     gunName="AK47" 
                     hocHandlegunshots={this.handleMouseOver}
                     hocGunshots={this.state.gunShots}
+                    showImage={this.handleImage ? this.state.image: ""}
                     {...this.props}
                     />
                 </div>
