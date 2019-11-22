@@ -1,18 +1,20 @@
 .App {
     display: flex;
     flex-direction: rows;
-    border: 3px solid orange;
     justify-content: space-evenly;
     background-color:greenyellow;
+    height: 450px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif  ;
 }
 
 .button {
     text-decoration: none;
     border: 1px solid orange;
-    color: white;
     background: orange;
     border-radius: 30px;
+    color:black;
     padding: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif  ;
 }
 
 .button-control {

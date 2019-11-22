@@ -1,38 +1,61 @@
 import React, { Component } from 'react'
-import SoldierImg from './assets/soldier.png'
+import image from './assets/soldier.png'
+import './army.css'
+import bullsEye from './assets/bullsEye.png'
+import { tsImportEqualsDeclaration } from '@babel/types'
 
 const Army = (Men, shot) => {
     class NewMen extends Component {
         constructor(props) {
             super(props);
             this.state = {
-                    gunShots: 0,
-                    image: SoldierImg
+                    gunShots: 50,
+                    showImage: false,
+                    score: 0
             }
+            this.handleMouseoverEvents = this.handleMouseoverEvents.bind(this);
+            this.handleReload = this.handleReload.bind(this);
         }
 
-        handleMouseOver = () => {
+        handleReload() {
+            this.setState((prevstate) => ({
+                score: prevstate.score,
+                gunShots: 50
+            }))
+        }
+
+
+        handleMouseoverEvents() {
             this.setState({
-                gunShots: this.state.gunShots + shot
+                showImage: !this.state.showImage,
+           })
+            this.hocHandlegunshots();
+        }
+
+        handleMouseClick = () => {
+            this.setState({
+                gunShots: this.state.gunShots - shot,
+                score: this.state.score + 1
             })
         }
 
-        handleImage = () => {
-            this.setState({
-                image: this.state.image
-            })
-        }
+    
 
         render() {
             return (
                 <div>
                     <Men 
-                    gunName="AK47" 
-                    hocHandlegunshots={this.handleMouseOver}
-                    hocGunshots={this.state.gunShots}
-                    showImage={this.handleImage ? this.state.image: ""}
-                    {...this.props}
+                        gunName="AK47" 
+                        // hocHandlegunshots={this.handleMouseOver}
+                        hocGunshots={this.state.gunShots}
+                        Image={this.state.showImage && <img className="army-image" src={image} alt="Soldier" />}
+                        {...this.props}
                     />
+                    <h3>Score: {this.state.score}</h3>
+                    <img src={bullsEye} alt="bullseye" className="bull-image" text="Shoot here" onClick={this.handleMouseClick}/>
+                    <div className="reload">
+                        <a href="" onClick={this.handleReload} className="reload-button">RELOAD</a>
+                    </div>
                 </div>
             )
         }

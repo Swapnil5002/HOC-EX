@@ -1,0 +1,17 @@
+.army-image {
+    height: 100px;
+}
+
+.reload-button {
+    text-decoration: none;
+    border-radius: 30px;
+    border: 1px solid rgb(135, 218, 3);
+    background: rgb(135, 218, 3);
+    padding: 15px;
+    color: white;
+}
+
+.bull-image {
+    height: 100px;
+    margin-bottom: 30px;
+}
