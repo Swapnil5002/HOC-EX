@@ -15,6 +15,19 @@
     height: 100px;
     margin-bottom: 30px;
     box-shadow: 3px 3px 5px 6px rgb(109, 185, 73);
+    animation: yourAnimation 3s infinite 0s linear;
+}
+
+@keyframes yourAnimation{
+    0%{
+        transform: translateX(-100px);
+        }
+    50%{
+        transform: translateX(100px);
+        }
+    100%{
+        transform: translateX(-100px);
+        }
 }
 
 .men {
@@ -43,4 +56,12 @@
 
 .image {
     height: 100px;
+}
+
+.shooting {
+    text-decoration: none;
+    border-radius: 30px;
+    border: 1px solid white;
+    padding: 15px;
+    color: white;
 }

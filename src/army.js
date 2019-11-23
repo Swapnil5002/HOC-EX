@@ -19,6 +19,11 @@ const Army = (Men, shot) => {
             this.handleReload = this.handleReload.bind(this);
             this.handleMouseClick = this.handleMouseClick.bind(this);
             this.handleinitialMessage = this.handleinitialMessage.bind(this)
+            this.handleShooting = this.handleShooting.bind(this)
+        }
+
+        handleShooting() {
+            
         }
 
         handleinitialMessage() {
@@ -70,7 +75,7 @@ const Army = (Men, shot) => {
                          <a className="button" href="" onClick={this.handleOnClick}>End Shooting</a>
                     </div>
                     <div className="initial-message">
-                        {this.state.score === 0 ? "Start shooting" : this.state.soldierImage ?<img src={image} alt="" className="image"/>: "Miss" }
+                        {this.state.score === 0 ? <a href="" className="shooting" onClick={this.handleShooting}>Start shooting</a>: this.state.soldierImage ?<img src={image} alt="" className="image"/>: "Miss" }
                     </div>
                 </div>
             )
