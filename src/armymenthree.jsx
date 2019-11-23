@@ -17,7 +17,7 @@ class Armymenthree extends Component {
             <div className="one-cotainer">
                 <h2 className="camp-title">Camp: {this.props.camp}</h2>
                 <h3 className="function-handler">
-                   Armymenone {this.props.gunName} 
+                   Armymenthree {this.props.gunName} 
                    gunshots : {this.props.hocGunshots}
                 </h3>
                    {this.props.Image && <img src={image} alt="Soldier"/>}

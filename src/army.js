@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import image from './assets/soldier.png'
 import './army.css'
 import bullsEye from './assets/bullsEye.png'
-import soldier from './assets/soldier.png'
 
 const Army = (Men, shot) => {
     class NewMen extends Component {
@@ -12,8 +11,10 @@ const Army = (Men, shot) => {
                     gunShots: 50,
                     showImage: false,
                     score: 0,
-                    soldier: false
+                    soldierImage: false
             }
+
+
             this.handleMouseoverEvents = this.handleMouseoverEvents.bind(this);
             this.handleReload = this.handleReload.bind(this);
             this.handleMouseClick = this.handleMouseClick.bind(this);
@@ -46,7 +47,7 @@ const Army = (Men, shot) => {
                 this.setState({
                     gunShots: this.state.gunShots - shot,
                     score: this.state.score + 1,
-                    soldier: true
+                    soldierImage: true
                 })
             }
         }
@@ -62,18 +63,18 @@ const Army = (Men, shot) => {
                     />
                         <h3>Score: {this.state.score}</h3>
                         <img src={bullsEye} alt="bullseye" className="bull-image" text="Shoot here" onClick={this.handleMouseClick}/>
-                        <div className="reload">
-                            <a href="" onClick={this.handleReload} className="reload-button">RELOAD</a>
-                        </div>
-                        <div className="button-control">
-                            <a className="button" href="" onClick={this.handleOnClick}>End Shooting</a>
-                        </div>
-                        <div className="initial-message">
-                            {this.state.score === 0 ? "Start shooting" : this.state.bullseyeImage ? "Miss" : soldier}
-                        </div>
+                    <div className="reload">
+                        <a href="" onClick={this.handleReload} className="reload-button">RELOAD</a>
+                    </div>
+                    <div className="button-control">
+                         <a className="button" href="" onClick={this.handleOnClick}>End Shooting</a>
+                    </div>
+                    <div className="initial-message">
+                        {this.state.score === 0 ? "Start shooting" : this.state.soldierImage ?<img src={image} alt="" className="image"/>: "Miss" }
+                    </div>
                 </div>
             )
-        }
+        } 
     }
     return NewMen;
 }
